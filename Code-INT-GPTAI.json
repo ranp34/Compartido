@@ -1,0 +1,264 @@
+{
+    "tool": {
+      "name": "UTNAI",
+      "description": "Asesor especializado en tesis de maestría de la UTN, proporcionando información sobre estructura y temas.",
+      "functions": [
+        {
+          "name": "get_thesis_structure",
+          "description": "Obtiene la estructura general de una tesis de maestría en la UTN.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "thesis_type": {
+                "type": "string",
+                "description": "El tipo de tesis, por ejemplo, 'sistemas', 'administración', etc."
+              }
+            },
+            "required": ["thesis_type"]
+          }
+        },
+        {
+          "name": "get_common_research_methods",
+          "description": "Obtiene las metodologías de investigación más comunes en las tesis de maestría.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "field_of_study": {
+                "type": "string",
+                "description": "El campo de estudio, por ejemplo, 'sistemas', 'economía', etc."
+              }
+            },
+            "required": ["field_of_study"]
+          }
+        },
+        {
+          "name": "get_specific_objectives",
+          "description": "Proporciona ejemplos de objetivos específicos para una tesis de maestría en un campo determinado.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "field_of_study": {
+                "type": "string",
+                "description": "El campo de estudio, por ejemplo, 'sistemas', 'administración', etc."
+              }
+            },
+            "required": ["field_of_study"]
+          }
+        },
+        {
+          "name": "get_thesis_introduction_sections",
+          "description": "Obtiene las secciones que deben incluirse en la introducción de una tesis de maestría.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "thesis_type": {
+                "type": "string",
+                "description": "El tipo de tesis, por ejemplo, 'sistemas', 'administración', etc."
+              }
+            },
+            "required": ["thesis_type"]
+          }
+        },
+        {
+          "name": "get_thesis_references",
+          "description": "Proporciona referencias de tesis relevantes que pueden ser útiles para un estudiante.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "field_of_study": {
+                "type": "string",
+                "description": "El campo de estudio, por ejemplo, 'sistemas', 'economía', etc."
+              }
+            },
+            "required": ["field_of_study"]
+          }
+        },
+        {
+          "name": "evaluate_idea_originality",
+          "description": "Evalúa la originalidad de una idea de tesis basada en un conjunto de ideas ya existentes.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "idea_description": {
+                "type": "string",
+                "description": "Descripción de la idea de tesis del usuario"
+              },
+              "existing_ideas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Lista de descripciones de ideas de tesis ya existentes"
+              }
+            },
+            "required": ["idea_description", "existing_ideas"]
+          }
+        },
+        {
+          "name": "generate_project_timeline",
+          "description": "Genera una línea de tiempo para un proyecto de tesis basado en la fecha de inicio y la fecha límite.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "start_date": {
+                "type": "string",
+                "description": "Fecha de inicio del proyecto en formato YYYY-MM-DD"
+              },
+              "end_date": {
+                "type": "string",
+                "description": "Fecha límite del proyecto en formato YYYY-MM-DD"
+              }
+            },
+            "required": ["start_date", "end_date"]
+          }
+        },
+        {
+          "name": "analyze_project_feasibility",
+          "description": "Analiza la viabilidad de un proyecto de tesis basado en los recursos disponibles y el tiempo.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "project_description": {
+                "type": "string",
+                "description": "Descripción del proyecto de tesis"
+              },
+              "available_resources": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Lista de recursos disponibles para el proyecto"
+              },
+              "time_frame": {
+                "type": "string",
+                "description": "Tiempo disponible para completar el proyecto"
+              }
+            },
+            "required": ["project_description", "available_resources", "time_frame"]
+          }
+        },
+        {
+          "name": "suggest_tools_and_technologies",
+          "description": "Sugiere herramientas y tecnologías útiles para un proyecto de tesis basado en la descripción del proyecto.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "project_description": {
+                "type": "string",
+                "description": "Descripción del proyecto de tesis"
+              }
+            },
+            "required": ["project_description"]
+          }
+        },
+        {
+          "name": "review_and_edit_chapter",
+          "description": "Revisa y sugiere mejoras para un capítulo específico de la tesis.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "chapter_content": {
+                "type": "string",
+                "description": "Contenido del capítulo a revisar"
+              }
+            },
+            "required": ["chapter_content"]
+          }
+        }
+      ],
+      "resources": {
+        "documents": [
+          {
+            "title": "Tesis 1",
+            "description": "Descripción de la tesis 1",
+            "link": "https://drive.google.com/file/d/1"
+          },
+          {
+            "title": "Tesis 2",
+            "description": "Descripción de la tesis 2",
+            "link": "https://drive.google.com/file/d/2"
+          },
+          {
+            "title": "Tesis 3",
+            "description": "Descripción de la tesis 3",
+            "link": "https://drive.google.com/file/d/3"
+          },
+          {
+            "title": "Tesis 4",
+            "description": "Descripción de la tesis 4",
+            "link": "https://drive.google.com/file/d/4"
+          },
+          {
+            "title": "Tesis 5",
+            "description": "Descripción de la tesis 5",
+            "link": "https://drive.google.com/file/d/5"
+          },
+          {
+            "title": "Tesis 6",
+            "description": "Descripción de la tesis 6",
+            "link": "https://drive.google.com/file/d/6"
+          },
+          {
+            "title": "Tesis 7",
+            "description": "Descripción de la tesis 7",
+            "link": "https://drive.google.com/file/d/7"
+          },
+          {
+            "title": "Tesis 8",
+            "description": "Descripción de la tesis 8",
+            "link": "https://drive.google.com/file/d/8"
+          },
+          {
+            "title": "Tesis 9",
+            "description": "Descripción de la tesis 9",
+            "link": "https://drive.google.com/file/d/9"
+          },
+          {
+            "title": "Tesis 10",
+            "description": "Descripción de la tesis 10",
+            "link": "https://drive.google.com/file/d/10"
+          }
+        ]
+      },
+      "example_questions": [
+        {
+          "question": "¿Cuál es la estructura general de una tesis de maestría en sistemas?",
+          "function": "get_thesis_structure",
+          "parameters": {
+            "thesis_type": "sistemas"
+          }
+        },
+        {
+          "question": "¿Qué metodologías de investigación son comunes en las tesis de economía?",
+          "function": "get_common_research_methods",
+          "parameters": {
+            "field_of_study": "economía"
+          }
+        },
+        {
+          "question": "¿Puedes darme ejemplos de objetivos específicos para una tesis de maestría en administración?",
+          "function": "get_specific_objectives",
+          "parameters": {
+            "field_of_study": "administración"
+          }
+        },
+        {
+          "question": "¿Qué secciones deben incluirse en la introducción de una tesis de maestría en ingeniería?",
+          "function": "get_thesis_introduction_sections",
+          "parameters": {
+            "thesis_type": "ingeniería"
+          }
+        },
+        {
+          "question": "¿Qué referencias de tesis en sistemas podrían ser útiles para mi investigación?",
+          "function": "get_thesis_references",
+          "parameters": {
+            "field_of_study": "sistemas"
+          }
+        },
+        {
+          "question": "¿Es original mi idea de tesis sobre la aplicación de IA en la gestión de inventarios?",
+          "function": "evaluate_idea_originality",
+          "parameters": {
+            "idea_description": "Aplicación de IA
+  

@@ -1,0 +1,24 @@
+{
+  "name": "evaluate_idea_originality",
+  "description": "Evalúa la originalidad de una idea de tesis basada en un conjunto de ideas ya existentes.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "idea_description": {
+        "type": "string",
+        "description": "Descripción de la idea de tesis del usuario"
+      },
+      "existing_ideas": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Lista de descripciones de ideas de tesis ya existentes"
+      }
+    },
+    "required": [
+      "idea_description",
+      "existing_ideas"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "generate_project_timeline",
+  "description": "Genera una línea de tiempo para un proyecto de tesis basado en la fecha de inicio y la fecha límite.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": "string",
+        "description": "Fecha de inicio del proyecto en formato YYYY-MM-DD"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "Fecha límite del proyecto en formato YYYY-MM-DD"
+      }
+    },
+    "required": [
+      "start_date",
+      "end_date"
+    ]
+  }
+}

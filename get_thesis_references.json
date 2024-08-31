@@ -1,0 +1,16 @@
+{
+  "name": "get_thesis_references",
+  "description": "Proporciona referencias de tesis relevantes que pueden ser útiles para un estudiante.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "field_of_study": {
+        "type": "string",
+        "description": "El campo de estudio, por ejemplo, 'sistemas', 'economía', etc."
+      }
+    },
+    "required": [
+      "field_of_study"
+    ]
+  }
+}

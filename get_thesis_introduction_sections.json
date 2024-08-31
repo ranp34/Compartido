@@ -1,0 +1,16 @@
+{
+  "name": "get_thesis_introduction_sections",
+  "description": "Obtiene las secciones que deben incluirse en la introducción de una tesis de maestría.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "thesis_type": {
+        "type": "string",
+        "description": "El tipo de tesis, por ejemplo, 'sistemas', 'administración', etc."
+      }
+    },
+    "required": [
+      "thesis_type"
+    ]
+  }
+}

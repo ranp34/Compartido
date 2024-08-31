@@ -1,0 +1,16 @@
+{
+  "name": "simulate_gpt",
+  "description": "Simula el comportamiento del GPT para ayudar con temas de tesis.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "input_text": {
+        "type": "string",
+        "description": "El texto de entrada del usuario"
+      }
+    },
+    "required": [
+      "input_text"
+    ]
+  }
+}

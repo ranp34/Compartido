@@ -1,0 +1,16 @@
+ {
+  "name": "get_specific_objectives",
+  "description": "Proporciona ejemplos de objetivos específicos para una tesis de maestría en un campo determinado.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "field_of_study": {
+        "type": "string",
+        "description": "El campo de estudio, por ejemplo, 'sistemas', 'administración', etc."
+      }
+    },
+    "required": [
+      "field_of_study"
+    ]
+  }
+}

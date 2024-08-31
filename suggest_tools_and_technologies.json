@@ -1,0 +1,16 @@
+{
+  "name": "suggest_tools_and_technologies",
+  "description": "Sugiere herramientas y tecnologías útiles para un proyecto de tesis basado en la descripción del proyecto.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "project_description": {
+        "type": "string",
+        "description": "Descripción del proyecto de tesis"
+      }
+    },
+    "required": [
+      "project_description"
+    ]
+  }
+}
